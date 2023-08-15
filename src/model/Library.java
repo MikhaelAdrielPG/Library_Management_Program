@@ -163,12 +163,11 @@ public class Library {
                 System.out.println("Nama: " + member.getName());
 
                 // Menampilkan buku yang sedang dipinjam oleh anggota
+                System.out.println("Buku yang Dipinjam:");
                 boolean hasBorrowedBooks = false;
                 for (Borrowing borrowing : borrowings) {
                     if (borrowing.getMember() == member) {
-                        System.out.println("Buku yang Dipinjam:");
                         System.out.println("- " + borrowing.getBook().getTitle() + " " + borrowing.getBook().getISBN());
-                        System.out.println();
                         hasBorrowedBooks = true;
                     }
                 }
